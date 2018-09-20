@@ -1,32 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+    <meta chared-displayeret="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
+    <link rel="stylesheet" href="lib/foundation.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
-    
+
+    <link rel="stylesheet" href="main.css">
+
     <title>Library Intro</title>
 
 </head>
+
 <body>
 
-    <header id="title-page rs">
+    <header id="title-page" class="red-displayer">
         <!-- base-layer -->
         <div id="title-page-bg"></div>
-        <header>
-            <div class="grid-x rs" id="header">
-                <div class="small-10 large-11">
-                    <!-- text title-->
-                </div>
-                <div class="small-2 large-1">
-                    <!-- hamberger -->
-                </div>
-           </div>
-        </header>
+        <div class="grid-x red-displayer" id="header">
+            <div class="cell small-10 large-11 red-displayer ">
+                MO.LIBRARY
+            </div>
+            <div class="cell small-2 large-1 red-displayer">
+                <div class="hamberger"></div>
+            </div>
+        </div>
     </header>
-    
+    <nav id="thlib-nav" class="red-displayer grid-container">
+        <div class="grid-x grid-margin-x" style="height: 100%;">
+            <div class="cell red-displayer small-4 medium-4 large-4">
+                <div class="thlib-cell red-displayer ">
+                    
+                </div>
+            </div>
+            <div class="cell red-displayer small-4 medium-4 large-4">
+                <div class="thlib-cell red-displayer">
+                    
+                </div>
+            </div>
+            <div class="cell red-displayer small-4 medium-4 large-4">
+                <div class="thlib-cell red-displayer">
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
     <script>
         new Vue({
             el: "#helloworld",
@@ -36,4 +56,5 @@
         })
     </script>
 </body>
+
 </html>
