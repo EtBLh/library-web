@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="lib/foundation.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
-
+    <script src="lib/jquery-3.3.1.slim.min.js"></script>
     <link rel="stylesheet" href="main.css">
 
     <title>Library Intro</title>
@@ -15,38 +15,32 @@
 </head>
 
 <body>
-
-    <header id="title-page" class="red-displayer">
-        <!-- base-layer -->
-        <div id="title-page-bg"></div>
-        <div class="grid-x red-displayer" id="header">
-            <div class="cell small-10 large-11 red-displayer ">
-                MO.LIBRARY
-            </div>
-            <div class="cell small-2 large-1 red-displayer">
-                <div class="hamberger"></div>
-            </div>
+    <header class="grid-x " id="header">
+        <div class="cell small-10 large-11  ">
+            MO.LIBRARY
+        </div>
+        <div class="cell small-2 large-1 ">
+            <div class="hamberger"></div>
         </div>
     </header>
-    <nav id="thlib-nav" class="red-displayer grid-container">
-        <div class="grid-x grid-margin-x" style="height: 100%;">
-            <div class="cell red-displayer small-4 medium-4 large-4">
-                <div class="thlib-cell red-displayer ">
-                    
-                </div>
-            </div>
-            <div class="cell red-displayer small-4 medium-4 large-4">
-                <div class="thlib-cell red-displayer">
-                    
-                </div>
-            </div>
-            <div class="cell red-displayer small-4 medium-4 large-4">
-                <div class="thlib-cell red-displayer">
-                    
-                </div>
-            </div>
-        </div>
+    <div id="title-page" class="">
+        <!-- base-layer -->
+        <div id="title-page-bg"></div>
+    </div>
+    <nav id="thlib-nav" class=" show-for-small-only">
+        <div class="thlib-cell"></div>
+        <div class="thlib-cell"></div>
+        <div class="thlib-cell"></div>
     </nav>
+
+    <main class="grid-x">
+        <section class="information small-12 large-4 medium-4 red-displayer"></section>
+        <section class="information small-12 large-4 medium-4 red-displayer"></section>
+        <section class="information small-12 large-4 medium-4 red-displayer"></section>
+    </main>
+
+    <footer id="footer"></footer>
+
     <script>
         new Vue({
             el: "#helloworld",
@@ -55,6 +49,7 @@
             }
         })
     </script>
+    <script src="main.js"></script>
 </body>
 
 </html>
