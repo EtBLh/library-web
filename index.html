@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="lib/foundation.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
-    <script src="lib/jquery-3.3.1.slim.min.js"></script>
+    <script src="lib/jquery.min.js"></script>
     <link rel="stylesheet" href="main.css">
 
     <title>Library Intro</title>
@@ -16,30 +16,50 @@
 
 <body>
     <header class="grid-x " id="header">
-        <div class="cell small-10 large-11  ">
-            MO.LIBRARY
-        </div>
-        <div class="cell small-2 large-1 ">
-            <div class="hamberger"></div>
-        </div>
+            <img src="resource/logo.png" style="height: 1em;" alt="官網LOGO">
+            <span>MO LIBRARY</span>
     </header>
+
     <div id="title-page" class="">
         <!-- base-layer -->
         <div id="title-page-bg"></div>
+        <div id="title-text">
+            <div style="display: inline-block; width: 80%; font-weight: 900;">
+                <p style="font-size: 1.7em;">澳門公共圖書館</p>
+                <hr>
+                <p style="font-size: 1em;">BIBLIOTECAS Públicas de MACAU</p>
+            </div><br>
+            <a href="" id="latest-lib">查詢最近的圖書館</a>
+        </div>
     </div>
-    <nav id="thlib-nav" class=" show-for-small-only">
-        <div class="thlib-cell"></div>
-        <div class="thlib-cell"></div>
-        <div class="thlib-cell"></div>
-    </nav>
-
     <main class="grid-x">
-        <section class="information small-12 large-4 medium-4 red-displayer"></section>
-        <section class="information small-12 large-4 medium-4 red-displayer"></section>
-        <section class="information small-12 large-4 medium-4 red-displayer"></section>
+        <section class="information small-12 large-4 medium-4 ">
+            <img src="" alt="" class="lib-logo">
+            <h2>澳門中央圖書館</h2>
+            <p>决包马托反弄必块何良费几拉曲些超任？将超朋乱呀调某快盛？击展必彩妙站差苏读棋林受汉化！终对歌汽但温幸白感毕松洛禁角！默加错高维儿。飞角束奶游情！成素杰海队合！设字吧但热释。游室海喊雪行那彩神人客该做来父蒙。莫管智紧那孤亡油差洗族床油清队？层智遍跟江形伤古遗帝显格跑退修。旁头多语和布乡曲勒病北善碃赶堂汉全。农形船恐牛婚架取已玩票法怎到喊赶。共陈金区爸做运型听置判左住做多板蜖？江术品商经女余识征建从！</p>
+        </section>
+        <section class="information small-12 large-4 medium-4 ">
+            <img src="" alt="" class="lib-logo">
+            <h2>望廈圖書館</h2>
+            <p>决包马托反弄必块何良费几拉曲些超任？将超朋乱呀调某快盛？击展必彩妙站差苏读棋林受汉化！终对歌汽但温幸白感毕松洛禁角！默加错高维儿。飞角束奶游情！成素杰海队合！设字吧但热释。游室海喊雪行那彩神人客该做来父蒙。莫管智紧那孤亡油差洗族床油清队？层智遍跟江形伤古遗帝显格跑退修。旁头多语和布乡曲勒病北善碃赶堂汉全。农形船恐牛婚架取已玩票法怎到喊赶。共陈金区爸做运型听置判左住做多板蜖？江术品商经女余识征建从！</p>
+        </section>
+        <section class="information small-12 large-4 medium-4 ">
+            <img src="" alt="" class="lib-logo">
+            <h2>黑沙環公園黃營均圖書館</h2>
+            <p>决包马托反弄必块何良费几拉曲些超任？将超朋乱呀调某快盛？击展必彩妙站差苏读棋林受汉化！终对歌汽但温幸白感毕松洛禁角！默加错高维儿。飞角束奶游情！成素杰海队合！设字吧但热释。游室海喊雪行那彩神人客该做来父蒙。莫管智紧那孤亡油差洗族床油清队？层智遍跟江形伤古遗帝显格跑退修。旁头多语和布乡曲勒病北善碃赶堂汉全。农形船恐牛婚架取已玩票法怎到喊赶。共陈金区爸做运型听置判左住做多板蜖？江术品商经女余识征建从！</p>
+        </section>
     </main>
-
-    <footer id="footer"></footer>
+    <nav id="thlib-nav" class=" show-for-small-only">
+        <div class="title">
+            <h2>NAVIGATION</h2>
+        </div>
+        <img class="thlib-cell"></img>
+        <img class="thlib-cell"></img>
+        <img class="thlib-cell"></img>
+    </nav>
+    <footer id="footer">
+        <p>地址: 澳門崗頂前地3號 | 電話: (853)2856 7576 / (853)2837 7117 | 傳真: (853)2831 4456 | 電郵: inf.bp@icm.gov.mo</p>
+    </footer>
 
     <script>
         new Vue({
