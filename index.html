@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="lib/foundation.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
     <script src="lib/jquery.min.js"></script>
+    <script src="resource/data.js"></script>
     <link rel="stylesheet" href="main.css">
 
     <title>Library Intro</title>
@@ -16,7 +17,7 @@
 
 <body>
     <header class="grid-x " id="header">
-            <img src="resource/logo.png" style="height: 1em;" alt="官網LOGO">
+            <img src="resource/logo.png" style="height: 1em; margin: .2em;" alt="官網LOGO">
             <span>MO LIBRARY</span>
     </header>
 
@@ -29,7 +30,7 @@
                 <hr>
                 <p style="font-size: 1em;">BIBLIOTECAS Públicas de MACAU</p>
             </div><br>
-            <a href="" id="latest-lib">查詢最近的圖書館</a>
+            <a href="javascript:check();" id="latest-lib">查詢最近的圖書館</a>
         </div>
     </div>
     <main class="grid-x">

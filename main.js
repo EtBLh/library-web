@@ -11,25 +11,29 @@ $(window).on('scroll', function() {
     header.css('background-color',`rgba(0,0,0,${progress*2 > 0.85 ? 0.85:progress*2})`);
 });
 
-var lat, lng;
 
-navigator.geolocation.getCurrentPosition(function(position) {
-    // console.log(position.coords.latitude, position.coords.longitude);
-    lat = position.coords.latitude, lng = position.coords.longitude;
-});
+function check(){
+   let lowest_d = undefined;
+    function success(lat, lng){
+        console.log('hellworld');
+        for (i in data){
+            i.distance = 
+                Math.sqrt(
+                        Math.pow(lat-i.location.lat,2)+
+                        Math.pow(lng-i.location.lng,2));
+            if (i.distance<lowest_d.distance || !lowest_d){
+                lowest_d = i;
+            }
+        }
+        console.log(lowest_d);
+    }
+    
+    navigator.geolocation.getCurrentPosition(function(position) {
+        lat = position.coords.latitude, lng = position.coords.longitude;
+        success(lat, lng);
+    },
+    function(err){
+        console.log(err);
+    });
 
-// $.ajax({
-//     url: 'resource/data.json',
-//     type: 'GET',
-//     dataType: 'json',
-//     success: (msg) => {
-//         alert(msg);
-//     },
-//     error: (a,b,c) => {
-
-//     }
-// });
-
-$.get("resource/data.json",(data) => {
-    console.log(data);
-})
+};
