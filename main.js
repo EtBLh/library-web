@@ -25,7 +25,7 @@ function check(){
                 lowest_d = i;
             }
         }
-        console.log(lowest_d);
+        alert(lowest_d);
     }
     
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -33,7 +33,7 @@ function check(){
         success(lat, lng);
     },
     function(err){
-        console.log(err);
+        alert(err);
     });
 
 };
