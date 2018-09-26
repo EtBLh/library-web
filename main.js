@@ -33,7 +33,7 @@ function check(){
         success(lat, lng);
     },
     function(err){
-        alert(err);
+        alert(err.message);
     });
 
 };
