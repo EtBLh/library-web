@@ -93,13 +93,66 @@ p {
   background: steelblue;
 }
 
+#list {
+  height: auto;
+  padding: 0.2em;
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+  text-align: center;
+  background: darkslateblue;
+  color: white;
+  position: relative;
+}
+#list h2 {
+  position: relative;
+}
+#list h2::after {
+  background: rgba(0, 0, 0, 0.2);
+  left: 0%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+#list a {
+  color: white;
+  font-style: italic;
+}
+#list .expandable-hide {
+  display: none;
+}
+#list .expandable-show {
+  display: block;
+}
+#list #expand {
+  font-size: 12px;
+  padding: 1px;
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  width: 100%;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+#list #expand::hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+#list .link {
+  display: block;
+}
+
 #footer {
-  height: 30vh;
-  background-color: whitesmoke;
+  height: auto;
+  color: white;
+  background-color: #232323;
   padding: 1em;
 }
 #footer p {
   font-family: "Times New Roman", Times, serif;
+  font-size: 0.5em;
+}
+#footer p h2 {
+  margin: 0.1em;
 }
 #footer p span {
   font-weight: 600;

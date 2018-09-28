@@ -100,17 +100,67 @@ p {
     }
 }
 
+#list {
+    height: auto;
+    padding: .2em;
+    padding-top: .5em;
+    padding-bottom: 1em;
+    text-align: center;
+    background: darkslateblue;
+    color: white;
+    position: relative;
+    h2{
+        position: relative;
+        &::after{
+            background: rgba($color: black, $alpha: .2);
+            left: 0%;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    a {
+        color: white;
+        font-style: italic;
+    }
+    .expandable-hide{
+        display: none;
+    }
+    .expandable-show{
+        display: block;
+    }
+    #expand {
+        font-size: 12px;
+        padding: 1px;
+        color: white;
+        background: rgba($color: white, $alpha: .2);
+        width: 100%;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    #expand::hover{
+        background: rgba($color: white, $alpha: .4)
+    }
+    .link {
+        display: block;
+    }
+}
+
 #footer{
-    height: 30vh;
-    background-color: whitesmoke;
+    height: auto;
+    color: white;
+    background-color: #232323;
     padding: 1em;
     p {
         font-family: 'Times New Roman', Times, serif;
+        font-size: .5em;
+        h2 {
+            margin: .1em;
+        }
         span {
             font-weight: 600;
         }
-    }
-    img {
-        
     }
 }
