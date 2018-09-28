@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="detail.css">
+    <title>Document</title>
+    <script src="lib/vue.min.js"></script>
+    <script src="resource/data.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <img src="resource/logo.png" style="height: 1em; margin: .2em;" alt="官網LOGO">
+        <span>MO LIBRARY</span>
+    </header>
+    <main>
+        <section id="main">
+            <img src="resource/books.svg" alt="一個包含一些書的logo" id="logo">
+            <h1>{{lib_name}}</h1>
+            <p>
+                <span>地址:</span>{{address}} <br>
+                <span>電話:</span>{{phone_num}} <br>
+                <span>傳真:</span>{{fax}} <br>
+                <span>開放時間:</span>{{open_time}} <br>
+            </p>
+        </section>
+        <section id="location">
+            <div id="map">
+                <div class="loading"></div>
+            </div>
+            <script>
+                var map;
+                
+                function initMap() {
+                    try {
+
+                    map = new google.maps.Map(document.getElementById('map'), {
+                        center: {
+                            lat: -34.397,
+                            lng: 150.644
+                        },
+                        zoom: 20
+                    });
+                    
+                }
+            </script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPscU0vW6QO1ILF1r_4gyz0n85FlD772M&callback=initMap" async defer></script>
+        </section>
+    </main>
+    <section id="nav">
+
+    </section>
+    <footer id="footer">
+        <img src="resource/logo-text.png" alt="公共圖書館官網的logo">
+        <p>
+            <span>地址</span>: 澳門崗頂前地3號 <br>
+            <span>電話</span>: (853)2856 7576 / (853)2837 7117 <br>
+            <span>傳真</span>: (853)2831 4456 <br>
+            <span>電郵</span>: inf.bp@icm.gov.mo<br>
+        </p>
+    </footer>
+    <script src="detail.js"></script>
+</body>
+
+</html>

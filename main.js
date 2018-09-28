@@ -13,27 +13,29 @@ $(window).on('scroll', function() {
 
 
 function check(){
-   let lowest_d = undefined;
-    function success(lat, lng){
-        console.log('hellworld');
-        for (i in data){
-            i.distance = 
+   let lowest_d = {distance:100};
+   let lowest_d_key = '';
+    function success(pos){
+        let lat = pos.coords.latitude, lng = pos.coords.longitude;
+        for (let i in data){
+            if (!data[i].location) continue;
+            data[i].distance = 
                 Math.sqrt(
-                        Math.pow(lat-i.location.lat,2)+
-                        Math.pow(lng-i.location.lng,2));
-            if (i.distance<lowest_d.distance || !lowest_d){
-                lowest_d = i;
+                        Math.pow(lat-data[i].location.lat,2)+
+                        Math.pow(lng-data[i].location.lng,2));
+            if (data[i].distance<lowest_d.distance ){
+                lowest_d = data[i];
+                lowest_d_key = i;
             }
         }
-        alert(lowest_d);
+        console.log(lowest_d, lowest_d_key);
+        alert(lowest_d_key);
     }
     
-    navigator.geolocation.getCurrentPosition(function(position) {
-        lat = position.coords.latitude, lng = position.coords.longitude;
-        success(lat, lng);
-    },
+    navigator.geolocation.getCurrentPosition(success,
     function(err){
         alert(err);
     });
+
 
 };
