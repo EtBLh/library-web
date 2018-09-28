@@ -33,21 +33,24 @@
             </div>
             <script>
                 var map;
-                
+
                 function initMap() {
                     try {
 
-                    map = new google.maps.Map(document.getElementById('map'), {
-                        center: {
-                            lat: -34.397,
-                            lng: 150.644
-                        },
-                        zoom: 20
-                    });
-                    
+                        map = new google.maps.Map(document.getElementById('map'), {
+                            center: {
+                                lat: -34.397,
+                                lng: 150.644
+                            },
+                            zoom: 20
+                        });
+                    } catch {
+                        alert('Cannot communicate with Google map API');
+                    }
                 }
             </script>
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPscU0vW6QO1ILF1r_4gyz0n85FlD772M&callback=initMap" async defer></script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPscU0vW6QO1ILF1r_4gyz0n85FlD772M&callback=initMap"
+                async defer></script>
         </section>
     </main>
     <section id="nav">
