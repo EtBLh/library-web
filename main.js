@@ -34,8 +34,12 @@ function check(){
     
     navigator.geolocation.getCurrentPosition(success,
     function(err){
-        alert(err);
+        alert(err.message);
     });
 
+<<<<<<< HEAD
 
 };
+=======
+};
+>>>>>>> f8627bfc93b35f9cfec205f8f7442b779665a112
