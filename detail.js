@@ -22,3 +22,20 @@ new Vue({
         fax: data[target]['傳真']
     }
 })
+
+var map;
+
+function initMap() {
+    try {
+
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {
+                lat: data[target]['location'].lat,
+                lng: data[target]['location'].lng
+            },
+            zoom: 20
+        });
+    } catch {
+        alert('Cannot communicate with Google map API');
+    }
+}
